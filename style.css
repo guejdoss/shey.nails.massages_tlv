@@ -136,3 +136,39 @@ dd span{font-weight:400;color:var(--cocoa-soft);font-size:15px}
 [dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{font-family:"Frank Ruhl Libre", Georgia, serif;line-height:1.2}
 [dir="rtl"] .benefits b,[dir="rtl"] .card h3{font-family:"Frank Ruhl Libre", Georgia, serif;font-size:21px}
 [dir="rtl"] .card .meta{direction:ltr;text-align:right}
+
+/* mobile : passe d'optimisation (06/11) */
+.arch img{height:auto}
+@media (max-width:820px){
+  .hero{padding-block:20px 40px}
+  .hero-in{gap:20px}
+  .hero-arch{max-width:170px;padding:6px}
+  .hero-text{gap:14px}
+  .hero .lead{font-size:17px}
+  .section{padding-block:44px}
+  .section h2{margin-top:6px}
+  .intro{margin-top:12px;font-size:17px}
+  .two{gap:24px;margin-top:20px}
+  .prose{font-size:17px;gap:12px}
+  .benefits{gap:12px}
+  .benefits b{font-size:20px}
+  .cards{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(250px,80%);overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-top:28px;margin-inline:calc(-1 * var(--gutter));padding:0 var(--gutter) 8px;scroll-padding-inline:var(--gutter);scrollbar-width:thin}
+  .card{scroll-snap-align:start;padding:22px}
+  .card h3{font-size:25px}
+  .faq{margin-top:24px;padding-block:14px}
+  .gallery{padding-block:24px 18px;gap:10px}
+  .menu{margin-top:24px;padding:24px 18px;gap:12px}
+  .menu .script{font-size:2rem}
+  .booking,.booking-fallback{margin-top:20px}
+  .booking-fallback{padding:24px;gap:16px}
+  .foot{padding-block:32px calc(28px + env(safe-area-inset-bottom,0px))}
+  .foot-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 20px;font-size:15px}
+  .foot-in > div:first-child{grid-column:1 / -1;display:flex;align-items:baseline;gap:14px}
+  .foot-logo{font-size:28px}
+  .foot-in a{overflow-wrap:anywhere}
+}
+@media (max-width:380px){
+  .logo span{font-size:22px}
+  .langs button{padding:4px 7px}
+  .btn-sm{padding:0 14px}
+}
