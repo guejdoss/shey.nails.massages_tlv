@@ -109,12 +109,12 @@ p{margin:0}
 .menu-col{display:grid;gap:14px;align-content:start}
 .menu .script{font-size:2.2rem;margin-top:10px}
 .menu-col .script:first-child{margin-top:0}
-dl{margin:0;display:grid;gap:10px}
-dl div{display:flex;gap:12px;align-items:baseline}
-dt{flex:0 1 auto;min-width:0}
+dl{margin:0;display:grid;gap:12px}
+dl div{display:flex;flex-wrap:wrap;column-gap:12px;align-items:baseline}
+dt{flex:0 1 auto;min-width:0;max-width:calc(100% - 7em)}
 dl div::after{content:"";order:1;flex:1 1 24px;border-bottom:1px dotted var(--latte);transform:translateY(-4px)}
 dd{order:2;margin:0;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
-dd span{font-weight:400;color:var(--cocoa-soft);font-size:15px}
+dd.desc{order:3;flex:1 1 100%;font-weight:400;white-space:normal;color:var(--cocoa-soft);font-size:15px;line-height:1.45;margin:2px 0 6px}
 @media (max-width:820px){.menu{grid-template-columns:minmax(0,1fr);padding:28px 20px}}
 
 /* booking */
